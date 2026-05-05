@@ -11,11 +11,6 @@ export function Header({ month, year, title, subtitle }: HeaderProps) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-8 gap-4">
       <div className="flex-1">
-        <div className="mb-2">
-          <div className="inline-block bg-blue-50 px-4 py-1 border-l-4 transition-all duration-300" style={{ borderColor: 'var(--svi-primary)' }}>
-            <p className="text-base sm:text-lg font-semibold" style={{ color: 'var(--svi-dark-gray)' }}>{month} {year}</p>
-          </div>
-        </div>
         <h1 className="text-2xl sm:text-3xl font-bold mb-2 tracking-tight transition-all duration-300" style={{ color: 'var(--svi-primary)' }}>
           {title}
         </h1>
