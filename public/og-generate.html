@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVI - OG Image Generator</title>
+</head>
+<body style="margin: 0; padding: 20px; background: #f0f0f0; font-family: system-ui;">
+    <h1>Genera la imagen OG</h1>
+    <p>1. Abre las DevTools (F12)</p>
+    <p>2. Ve a la pestaña Console</p>
+    <p>3. Ejecuta este código:</p>
+    <pre style="background: #222; color: #0f0; padding: 20px; overflow-x: auto;">
+const canvas = document.createElement('canvas');
+canvas.width = 1200;
+canvas.height = 630;
+const ctx = canvas.getContext('2d');
+
+// Fondo gradiente azul
+const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+gradient.addColorStop(0, '#012878');
+gradient.addColorStop(1, '#0052CC');
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 1200, 630);
+
+// Texto
+ctx.fillStyle = 'white';
+ctx.font = 'bold 120px system-ui, -apple-system, sans-serif';
+ctx.textAlign = 'center';
+ctx.fillText('SVI', 600, 250);
+
+ctx.font = '48px system-ui, -apple-system, sans-serif';
+ctx.fillText('SYSTEMATIC VALUE INVESTING', 600, 380);
+
+ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+ctx.font = '32px system-ui, -apple-system, sans-serif';
+ctx.fillText('Inversión sistemática en empresas de calidad', 600, 460);
+
+// Descargar
+const link = document.createElement('a');
+link.download = 'og-image.png';
+link.href = canvas.toDataURL('image/png');
+link.click();
+    </pre>
+    <button onclick="generateImage()" style="padding: 15px 30px; font-size: 18px; background: #0052CC; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        GENERAR IMAGEN OG
+    </button>
+
+    <script>
+        function generateImage() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1200;
+            canvas.height = 630;
+            const ctx = canvas.getContext('2d');
+
+            // Fondo gradiente azul
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#012878');
+            gradient.addColorStop(1, '#0052CC');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+
+            // Línea decorativa superior
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.fillRect(0, 0, 1200, 8);
+
+            // Texto principal
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 120px system-ui, -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('SVI', 600, 240);
+
+            // Línea decorativa central
+            ctx.fillStyle = 'white';
+            ctx.fillRect(480, 320, 240, 6);
+
+            // Subtítulo
+            ctx.font = '600 52px system-ui, -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillText('SYSTEMATIC VALUE', 600, 400);
+            ctx.fillText('INVESTING', 600, 465);
+
+            // Descripción
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+            ctx.font = '32px system-ui, -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.fillText('Inversión sistemática en empresas de calidad', 600, 550);
+
+            // Descargar
+            const link = document.createElement('a');
+            link.download = 'og-image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+
+            alert('Imagen descargada! Súbela a /public/og-image.png');
+        }
+    </script>
+</body>
+</html>
