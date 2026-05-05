@@ -1,0 +1,127 @@
+{
+  "month": "Marzo",
+  "year": "2026",
+  "title": "SYSTEMATIC VALUE INVESTING US MARKETS",
+  "subtitle": "Gestión Boutique VII",
+  "yahooTicker": "0P0001TB5J.F",
+  "riskLevel": 4,
+  "description": [
+    "Systematic Value Investing US Markets es un compartimento de renta variable estadounidense con negociación diaria, estructurado como un Fondo de Inversión español y gestionado activamente por Andbank Wealth Management. El fondo aplica un proceso sistemático de inversión value orientado a identificar compañías infravaloradas en el mercado estadounidense, combinando criterios fundamentales y cuantitativos.",
+    "Andbank Wealth Management es una gestora con amplia experiencia en la administración de vehículos UCITS y estrategias de renta variable internacional, destacando por su enfoque disciplinado de gestión de riesgos, control regulatorio y arquitectura de inversión abierta.",
+    "El fondo cuenta con el asesoramiento de Sapphire Capital EAF S.L. y la tecnología de Systematic Value Investing, especializado en análisis fundamental y en la identificación de oportunidades value en el mercado americano con algoritmos cuantitativos y validación humana. Sapphire aporta su conocimiento sectorial y su experiencia analizando compañías con una metodología repetible y orientada al largo plazo, complementando los recursos y procesos de la gestora."
+  ],
+  "investmentObjective": {
+    "title": "Objetivo de Inversión",
+    "text": "El compartimento tiene como objetivo obtener una revalorización a medio y largo plazo, manteniendo un riesgo coherente con la naturaleza de los activos en cartera. La gestión es activa y basada en una filosofía de value investing sistemático, con una volatilidad máxima inferior al 25% anual. El fondo no sigue un índice de referencia."
+  },
+  "topHoldings": [
+    { "name": "Genmab AS", "percentage": "4,39%" },
+    { "name": "Crocs", "percentage": "3,94%" },
+    { "name": "Monster Beverage Corp", "percentage": "3,74%" },
+    { "name": "Palomar Holdings", "percentage": "3,60%" },
+    { "name": "Afya Ltd", "percentage": "3,57%" }
+  ],
+  "quarterlyReturns": [
+    {
+      "year": "2023",
+      "quarters": ["-", "5,70%", "0,80%", "10,74%"],
+      "total": "18,04%"
+    },
+    {
+      "year": "2024",
+      "quarters": ["10%", "-1,43%", "3,95%", "6,16%"],
+      "total": "19,99%"
+    },
+    {
+      "year": "2025",
+      "quarters": ["-8,70%", "-3,90%", "7,20%", "4,10%"],
+      "total": "-2,08%"
+    },
+    {
+      "year": "2026",
+      "quarters": ["-6,57%", "0,22%", "-", "-"],
+      "total": "-6,36%"
+    }
+  ],
+  "fundFeaturesLeft": [
+    { "label": "Gestora", "value": "Andbank Wealth Management" },
+    { "label": "Administrador", "value": "Andbank Wealth Management" },
+    { "label": "Depositario", "value": "Banco Inversis S.A." },
+    { "label": "Estructura Legal", "value": "UCITS Fondo de Inversión (CNMV)" },
+    { "label": "Operativa", "value": "Diaria (D+2)" },
+    { "label": "Divisa Base", "value": "EUR" },
+    { "label": "Divisa de la Clase", "value": "EUR" },
+    { "label": "Patrimonio AUM", "value": "885.306€" },
+    { "label": "Inversión mínima", "value": "€1M (Clase A) - €10 (Clase B)" }
+  ],
+  "fundFeaturesRight": [
+    { "label": "Liquidación de Suscripciones", "value": "Same-day NAV" },
+    { "label": "Liquidación de Reembolsos", "value": "T+3" },
+    { "label": "Fecha de Lanzamiento", "value": "16 octubre 2024" },
+    { "label": "Comisión de Gestión", "value": "1% (Clase A) - 1,5% (Clase B)" },
+    { "label": "Comisión de Éxito", "value": "0%" },
+    { "label": "Comisión de Entrada/Salida", "value": "0%" },
+    { "label": "Yahoo Finance Ticker", "value": "0P0001TB5J.F" },
+    { "label": "ISIN (Clase A)", "value": "ES0131444129" },
+    { "label": "ISIN (Clase B)", "value": "ES0131444137" }
+  ],
+  "sectorAllocation": [
+    { "name": "Cuidado de la salud", "percentage": 20.4, "color": "#012878" },
+    { "name": "Tecnología", "percentage": 17.9, "color": "#2F4F8F" },
+    { "name": "Servicios financieros", "percentage": 15.7, "color": "#5a7a96" },
+    { "name": "Consumo cíclico", "percentage": 15.0, "color": "#4a7ba7" },
+    { "name": "Liquidez", "percentage": 10.8, "color": "#a3bbd2" },
+    { "name": "Servicios de comunicación", "percentage": 6.0, "color": "#6b8ca8" },
+    { "name": "Defensiva del consumidor", "percentage": 5.1, "color": "#7a8fa5" },
+    { "name": "Materiales básicos", "percentage": 3.4, "color": "#8A8A8A" },
+    { "name": "Energía", "percentage": 3.2, "color": "#4A4A4A" },
+    { "name": "Acciones industriales", "percentage": 2.5, "color": "#89b4d0" }
+  ],
+  "durationExposure": [
+    { "name": "0 - 6 meses", "percentage": 84, "color": "#a78bfa" },
+    { "name": "6 - 12 meses", "percentage": 14, "color": "#f4b840" },
+    { "name": "+12 meses", "percentage": 2, "color": "#6b9dbd" }
+  ],
+  "distributorInfo": {
+    "distributor": "Andbank Wealth Management",
+    "responsable": "David Sánchez Molina",
+    "telefono": "+34 935 95 23 71",
+    "email": "info@svinvesting.com"
+  },
+  "monthlyUpdate": {
+    "title": "Actualización Mensual de la Inversión",
+    "paragraphs": [
+      "El fondo SVI US Markets cerró el mes de marzo de 2026 con una rentabilidad de +0,75% neta, en un entorno marcado por elevada dispersión entre compañías y sectores. Aunque el mercado estadounidense continúa mostrando fortaleza en términos agregados, las dinámicas internas entre valores growth, consumo discrecional, tecnología e inteligencia artificial han generado movimientos significativos entre nuestras posiciones. Tal y como venimos explicando a los inversores, el efecto divisa continúa siendo un elemento relevante en la rentabilidad a corto plazo, pero no alteramos nuestra política de no cubrir divisa dada la evidencia histórica y su impacto sobre la rentabilidad potencial a largo plazo.",
+      "A nivel fundamental, la cartera mantiene un perfil claramente value. El PER mediano se sitúa en x14,5, muy por debajo del x28 del S&P 500, lo que refuerza el potencial de revalorización de nuestras posiciones. Nuestra estimación interna de rentabilidad anualizada de la cartera es del 13,6%, equivalente prácticamente a duplicar el valor en un horizonte de cinco años. El margen de seguridad del 16,4% continúa indicando que las valoraciones de nuestras compañías siguen siendo atractivas y alineadas con nuestra filosofía sistemática de inversión.",
+      "En términos de riesgo, la volatilidad anual de la cartera se sitúa en 16,3%, por encima del 12,9% del índice, algo razonable para una estrategia concentrada en 30 posiciones. La Beta de 0,91 refleja una sensibilidad moderadamente inferior al mercado, y métricas como el Sharpe (0,7) y el Sortino (1,0) se mantienen por encima de los valores del índice en el mismo periodo. Nuestro indicador interno de ventajas competitivas, el MOAT SP500, alcanza el 9,6%, señalando la solidez cualitativa y cuantitativa de las compañías en cartera frente a la empresa promedio del S&P 500.",
+      "En cuanto al comportamiento de las posiciones durante el periodo reciente, destacaron positivamente Futu Holdings, Google, Imperial Oil, NetEase y Genmab, mientras que compañías como Adobe, Salesforce, Lululemon, Euronet o Lantheus reflejaron correcciones ligadas principalmente a expectativas de crecimiento, efectos del ciclo de inversión en IA o revisiones de beneficios por parte del mercado. A nivel de construcción de cartera, hemos seguido aumentando exposición en Brasil (Afya, Pagseguro, NuBank, StoneCo, XP), reforzando posiciones en biopharma (Corcept, Genmab, Novo Nordisk) y añadiendo compañías de consumo discrecional y defensivo con valoraciones especialmente atractivas.",
+      "En el plano macroeconómico, la liquidez continúa siendo un factor determinante en la evolución del mercado estadounidense. A pesar de la probabilidad de recesión estimada por algunas entidades para 2026, nuestra metodología sistemática es independiente del entorno macro y se centra en identificar negocios infravalorados, sólidos y con ventajas competitivas sostenibles. Nuestro objetivo permanece inalterado: maximizar el potencial de rentabilidad, controlar el riesgo y mantener una correlación estable con el índice mundial y americano, incluso en escenarios inciertos."
+    ]
+  },
+  "importantInfo": {
+    "title": "Información Importante",
+    "paragraphs": [
+      "Toda la información de rentabilidad histórica proviene del valor liquidativo del fondo SVI US Markets, calculado y publicado por la Sociedad Gestora. La rentabilidad pasada no es indicativa de resultados futuros. La rentabilidad de esta Clase se calcula en EUR y se muestra tras deducir los gastos corrientes. La información sobre duración, exposición por sectores y otros datos de la cartera proviene de los sistemas internos de SVI o de proveedores externos considerados fiables.",
+      "Este documento es una comunicación de carácter meramente informativo y no constituye en ningún caso un documento contractual. Por favor, consulte el folleto completo del fondo y el Documento de Datos Fundamentales para el Inversor (DFI/KID) antes de tomar cualquier decisión de inversión. Este documento está dirigido exclusivamente a clientes profesionales, inversores institucionales o contrapartes elegibles según se define en la normativa aplicable. No debe ser distribuido entre inversores minoristas ni utilizado como base única para decisiones de inversión.",
+      "Este documento no constituye asesoramiento financiero, ni una recomendación, ni una oferta de compra o venta de ningún instrumento financiero. Los inversores deben considerar la conveniencia de la inversión y, en caso necesario, buscar asesoramiento financiero independiente antes de suscribir participaciones del fondo. La información incluida en este documento es propiedad de SVI y se presenta únicamente con fines de discusión. No se permite su copia, divulgación o distribución sin autorización expresa y por escrito de SVI.",
+      "No existe ninguna garantía de que el objetivo de inversión vaya a alcanzarse. Los resultados reales pueden diferir significativamente de los expresados o implícitos por rentabilidades pasadas, estimaciones internas o declaraciones prospectivas. La rentabilidad pasada no es un indicador fiable de la rentabilidad futura. El valor de las inversiones puede caer además de subir, y los inversores pueden no recuperar el capital inicialmente invertido.",
+      "Las posiciones mencionadas en este documento no representan la totalidad de las inversiones del fondo. No debe asumirse que futuras inversiones tendrán un comportamiento similar o serán rentables. Las empresas y posiciones específicas se mencionan únicamente con fines ilustrativos.",
+      "El SVI US Markets es un fondo de inversión armonizado registrado en la CNMV y sujeto a la normativa española aplicable a las IIC. Las participaciones del fondo se comercializan exclusivamente en España a través de las entidades debidamente registradas para ello. El fondo puede no estar registrado para su distribución en otras jurisdicciones.",
+      "Advertencia sobre riesgos:",
+      "La inversión en el fondo implica riesgos, incluidos riesgo de mercado, riesgo de tipo de cambio, riesgo de crédito, riesgo de liquidez, riesgo de concentración en renta variable estadounidense, y riesgos derivados del uso de instrumentos financieros derivados. Para información detallada sobre los riesgos asociados al fondo, consulte el folleto y el DFI/KID disponibles en la CNMV y en las plataformas de distribución autorizadas. La inversión debe realizarse como parte de una cartera diversificada.",
+      "Advertencia sobre divisa:",
+      "La clase del fondo se calcula en EUR. La exposición a activos denominados en USD puede provocar que las fluctuaciones del tipo de cambio afecten positiva o negativamente al valor liquidativo mostrado en EUR.",
+      "Los gráficos y tablas incluidos en este documento tienen fines exclusivamente informativos. Ningún gráfico o visualización debe considerarse suficiente para tomar decisiones de inversión. SVI no garantiza la exactitud o integridad de la información contenida en este documento, especialmente aquella obtenida de terceros, y no acepta responsabilidad alguna por pérdidas derivadas del uso de dicha información.",
+      "Los gastos corrientes representan las comisiones y costes necesarios para el funcionamiento del fondo. Adicionalmente, pueden incurrirse costes de transacción. Los inversores deben tener en cuenta que, si deciden invertir, estarán adquiriendo participaciones del fondo y no los activos subyacentes directamente."
+    ]
+  },
+  "contact": {
+    "address": "Av. del Carrilet, 3, 08902 L'Hospitalet de Llobregat, Barcelona",
+    "phone": "+34 935 95 23 71",
+    "email": "info@svinvesting.com"
+  },
+  "footer": {
+    "line1": "Systematic Value Investing | Av. del Carrilet, 3, 08902 L'Hospitalet de Llobregat, Barcelona | Phone: +34 935 95 23 71 | Email: info@svinvesting.com",
+    "line2": "La rentabilidad pasada no es un indicador fiable de la rentabilidad futura. El valor de la inversión puede tanto subir como bajar, y el inversor puede no recuperar el capital inicialmente invertido. Por favor, revise el Folleto y la documentación legal vigente antes de invertir"
+  }
+}
