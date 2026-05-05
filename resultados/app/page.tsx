@@ -26,7 +26,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-10 md:py-12">
         <div className="mb-6 flex justify-end animate-fadeIn">
-          <a href="/api/download-pdf">
+          <a href="/documents/reporte_SVI_Abril_2026.pdf" download="Reporte SVI - Abril 2026.pdf">
             <Button className="text-white transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: 'var(--svi-primary)' }}>
               <Download className="mr-2 h-4 w-4" />
               Descarga Reporte Completo (PDF)
@@ -164,7 +164,7 @@ export default function Home() {
         </div>
 
         <div className="mt-8 text-center animate-fadeIn animate-delay-300">
-          <a href="/api/download-pdf">
+          <a href="/documents/reporte_SVI_Abril_2026.pdf" download="Reporte SVI - Abril 2026.pdf">
             <Button className="text-white transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: 'var(--svi-primary)' }}>
               <Download className="mr-2 h-4 w-4" />
               Descarga Reporte Completo (PDF)
