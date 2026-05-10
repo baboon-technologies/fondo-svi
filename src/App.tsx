@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Metodologia from './pages/Metodologia';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/recursos" element={<Recursos />} />
           <Route path="/invertir" element={<Invertir />} />
         </Routes>
+        <Analytics />
       </div>
     </Router>
   );
