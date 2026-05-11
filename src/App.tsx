@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Analytics } from '@vercel/analytics/react';
 import Navigation from './components/Navigation';
-import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
 import Metodologia from './pages/Metodologia';
 import Resultados from './pages/Resultados';
@@ -34,7 +33,6 @@ function App() {
           <Route path="/recursos" element={<Recursos />} />
           <Route path="/invertir" element={<Invertir />} />
         </Routes>
-        <CookieBanner />
         <Analytics />
       </div>
     </Router>
