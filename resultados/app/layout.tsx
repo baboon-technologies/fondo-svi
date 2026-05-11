@@ -1,7 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
+import CookieBanner from '@/components/CookieBanner';
+
+const GA_ID = 'G-6ND9NZHSFY';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -49,8 +53,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="light">
+      <head>
+        <Script id="ga-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
+            try {
+              if (localStorage.getItem('svi_cookie_consent') === 'granted') {
+                gtag('consent', 'update', { 'analytics_storage': 'granted' });
+              }
+            } catch (e) {}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', { anonymize_ip: true });
+          `}
+        </Script>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${inter.className} ${playfair.variable}`}>
         {children}
+        <CookieBanner />
         <Analytics />
       </body>
     </html>
