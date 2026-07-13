@@ -40,8 +40,9 @@ export default function Navigation() {
                 <span className="text-[10px] font-mono font-semibold text-svi-dark-grey tracking-wider mt-0.5">ES0131444137</span>
               </div>
               <a
-                href="/SVI_para_institucionales.pdf"
-                download
+                href="https://www.svinvesting.com/ultimo-reporte"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-2.5 py-1.5 bg-svi-primary text-white text-[10px] font-semibold tracking-wide rounded hover:bg-svi-dark transition-colors whitespace-nowrap"
               >
                 <Download className="w-3 h-3" />
@@ -103,8 +104,9 @@ export default function Navigation() {
               <span className="text-[11px] font-mono font-semibold text-svi-dark-grey tracking-wider mt-0.5">ES0131444137</span>
             </div>
             <a
-              href="/SVI_para_institucionales.pdf"
-              download
+              href="https://www.svinvesting.com/ultimo-reporte"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-4 py-2 bg-svi-primary text-white text-xs font-semibold tracking-wide rounded hover:bg-svi-dark transition-colors whitespace-nowrap"
             >
               <Download className="w-3.5 h-3.5" />
