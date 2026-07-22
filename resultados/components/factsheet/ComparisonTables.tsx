@@ -49,6 +49,7 @@ export function ComparisonTables() {
       {/* Desktop: 2 columns */}
       <div className="grid md:grid-cols-2 gap-8">
         {/* Tabla Resultados */}
+        <div>
         <div className="bg-white rounded-xl border border-gray-200 shadow-md overflow-hidden">
           {/* Header */}
           <div className="bg-gray-100 border-b border-gray-200">
@@ -84,6 +85,8 @@ export function ComparisonTables() {
               </div>
             ))}
           </div>
+        </div>
+        <p className="text-xs italic text-gray-500 mt-2 px-1">*Desde abril 2023 a enero 2026.</p>
         </div>
 
         {/* Tabla Fundamentales */}

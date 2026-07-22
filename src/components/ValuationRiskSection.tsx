@@ -1,3 +1,5 @@
+import SVIQuoteVisual from './SVIQuoteVisual';
+
 export default function ValuationRiskSection() {
   return (
     <section className="py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
@@ -55,25 +57,31 @@ export default function ValuationRiskSection() {
 
         {/* BLOQUE 3 — LA ALTERNATIVA */}
         <div>
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-3xl lg:text-5xl font-bold text-svi-primary mb-6 lg:mb-8 leading-tight">
-              Indexarse es conformarse
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold text-svi-primary leading-tight">
+              Indexarse = Conformarse
             </h2>
+          </div>
 
-            <div className="space-y-3 lg:space-y-4">
-              <p className="text-2xl lg:text-4xl font-bold text-svi-dark-grey">
-                Conseguir
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Columna de texto */}
+            <div>
+              <p className="text-2xl lg:text-4xl text-svi-dark-grey leading-snug mb-8">
+                Conseguir <strong className="font-bold text-svi-secondary">Más Rentabilidad</strong> con <strong className="font-bold text-svi-secondary">Menos Riesgo</strong> y <strong className="font-bold text-svi-secondary">Similar Correlación</strong> que el índice es posible.
               </p>
 
-              <div className="flex flex-col gap-1 lg:gap-2">
-                <span className="text-2xl lg:text-4xl font-bold text-svi-secondary">+ Rentabilidad</span>
-                <span className="text-2xl lg:text-4xl font-bold text-svi-secondary">- Riesgo</span>
-                <span className="text-2xl lg:text-4xl font-bold text-svi-secondary">~ Correlación</span>
+              <div className="bg-emerald-50 border border-emerald-500/40 rounded-xl p-6 lg:p-8">
+                <p className="text-emerald-900 font-bold text-lg lg:text-xl leading-relaxed">
+                  ¿Nuestro Objetivo? Buscar un +10% de rentabilidad anual invirtiendo en acciones cotizadas en EEUU a largo plazo.
+                </p>
               </div>
+            </div>
 
-              <p className="text-2xl lg:text-4xl font-bold text-svi-dark-grey">
-                Es posible
-              </p>
+            {/* Columna del gráfico NAV en vivo */}
+            <div>
+              <div className="relative w-full aspect-[4/3]">
+                <SVIQuoteVisual />
+              </div>
             </div>
           </div>
         </div>

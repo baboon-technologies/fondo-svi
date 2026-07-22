@@ -8,11 +8,11 @@
   "description": [
     "Systematic Value Investing US Markets es un compartimento de renta variable estadounidense con negociación diaria, estructurado como un Fondo de Inversión español y gestionado activamente por Andbank Wealth Management. El fondo aplica un proceso sistemático de inversión value orientado a identificar compañías infravaloradas en el mercado estadounidense, combinando criterios fundamentales y cuantitativos.",
     "Andbank Wealth Management es una gestora con amplia experiencia en la administración de vehículos UCITS y estrategias de renta variable internacional, destacando por su enfoque disciplinado de gestión de riesgos, control regulatorio y arquitectura de inversión abierta.",
-    "El fondo cuenta con el asesoramiento de Sapphire Capital EAF S.L. y la tecnología de Systematic Value Investing, especializado en análisis fundamental y en la identificación de oportunidades value en el mercado americano con algoritmos cuantitativos y validación humana. Sapphire aporta su conocimiento sectorial y su experiencia analizando compañías con una metodología repetible y orientada al largo plazo, complementando los recursos y procesos de la gestora."
+    "El fondo cuenta con el asesoramiento de Sapphire Capital EAF S.L. y la tecnología de Systematic Value Investing, especializado en análisis fundamental y en la identificación de oportunidades value en el mercado americano con algoritmos cuantitativos y validación humana. La tecnología de SVI tiene un papel auxiliar para perfeccionar la metodología de inversión y aportar ideas de alta convicción al equipo de analistas financieros."
   ],
   "investmentObjective": {
     "title": "Objetivo de Inversión",
-    "text": "El compartimento tiene como objetivo obtener una revalorización a medio y largo plazo, manteniendo un riesgo coherente con la naturaleza de los activos en cartera. La gestión es activa y basada en una filosofía de value investing sistemático, con una volatilidad máxima inferior al 25% anual. El fondo no sigue un índice de referencia."
+    "text": "El compartimento tiene como objetivo obtener una revalorización a medio y largo plazo superior al 10% anual, manteniendo un riesgo coherente con la naturaleza de los activos en cartera. La gestión es activa y basada en una filosofía de Value Investing sistemático, con una volatilidad máxima inferior al 25% anual. El fondo no sigue un índice de referencia."
   },
   "topHoldings": [
     { "name": "Genmab AS", "percentage": "4,39%" },
@@ -51,7 +51,6 @@
     { "label": "Operativa", "value": "Diaria (D+2)" },
     { "label": "Divisa Base", "value": "EUR" },
     { "label": "Divisa de la Clase", "value": "EUR" },
-    { "label": "Patrimonio AUM", "value": "885.306€" },
     { "label": "Inversión mínima", "value": "€1M (Clase A) - €10 (Clase B)" }
   ],
   "fundFeaturesRight": [

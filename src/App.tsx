@@ -9,6 +9,12 @@ import Equipo from './pages/Equipo';
 import Recursos from './pages/Recursos';
 import Invertir from './pages/Invertir';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 function GAPageviews() {
   const location = useLocation();
   useEffect(() => {

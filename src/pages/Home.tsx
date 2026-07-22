@@ -1,16 +1,28 @@
 import { Link } from 'react-router-dom';
-import { Target, DollarSign, TrendingUp, ArrowRight, TrendingDown, Focus, Settings, LineChart, Layers, Tag, Shuffle } from 'lucide-react';
+import { ArrowRight, Focus, Settings, LineChart, Layers, Tag, Shuffle, ExternalLink } from 'lucide-react';
 import PremiumHero from '../components/PremiumHero';
 import ValuationRiskSection from '../components/ValuationRiskSection';
 import ContactForm from '../components/ContactForm';
+import WhatIsCarousel from '../components/WhatIsCarousel';
+import DavidBanner from '../components/DavidBanner';
 
 export default function Home() {
   return (
     <div>
       <PremiumHero />
 
+      <section className="py-10 lg:py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-16">
+          <div className="bg-emerald-50 border border-emerald-500/40 rounded-xl p-6 lg:p-8 text-center">
+            <p className="text-emerald-900 font-bold text-lg lg:text-xl leading-relaxed">
+              ¿Nuestro Objetivo? Buscar un +10% de rentabilidad anual invirtiendo en acciones cotizadas en EEUU a largo plazo.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-svi-primary mb-4">
               ¿Qué es Systematic Value Investing?
@@ -19,15 +31,7 @@ export default function Home() {
               Descubre el enfoque sistemático y basado en valor que guía cada decisión de inversión.
             </p>
           </div>
-          <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-svi-light-grey" style={{ paddingTop: '56.25%' }}>
-            <iframe
-              src="https://www.youtube.com/embed/qCV5Tx_x6Ok"
-              title="¿Qué es Systematic Value Investing?"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
+          <WhatIsCarousel />
         </div>
       </section>
 
@@ -83,7 +87,7 @@ export default function Home() {
           {/* Main Headline */}
           <div className="text-center mb-16 lg:mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-svi-primary mb-4 leading-tight">
-              SVI selecciona 30 compañías de alta calidad a valoraciones atractivas.
+              En el SVI US Markets seleccionamos 30 compañías de alta calidad a valoraciones atractivas.
             </h2>
             <p className="text-2xl lg:text-3xl text-svi-dark-grey font-light">
               Un enfoque selectivo frente a comprar todo el mercado.
@@ -104,7 +108,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold text-svi-primary mb-3">Enfoque</h3>
                   <p className="text-lg text-svi-dark-grey leading-relaxed">
-                    Fondo de renta variable americana 100% sistemático, diseñado para capturar el valor de las mejores compañías de EE.UU. sin sesgos emocionales.
+                    Fondo de renta variable americana 100% sistemático, diseñado para capturar el valor de las mejores compañías de EE.UU., buscando objetividad, atemporalidad y sistematización del proceso inversor.
                   </p>
                 </div>
               </div>
@@ -117,9 +121,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-svi-primary mb-3">100% Sistemático</h3>
+                  <h3 className="text-2xl font-bold text-svi-primary mb-3">Tecnología + Equipo Humano</h3>
                   <p className="text-lg text-svi-dark-grey leading-relaxed">
-                    El proceso de inversión se basa en un conjunto de reglas cuantificables que definen qué empresas pueden entrar en cartera y bajo qué condiciones. Cada decisión responde al sistema, no a una opinión.
+                    Sólo invertimos en las compañías que pasan nuestra rigurosa metodología y donde tanto nuestro algoritmo de SVI como nuestro equipo humano tiene una alta convicción.
                   </p>
                 </div>
               </div>
@@ -134,7 +138,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-2xl font-bold text-svi-primary mb-3">Rentabilidad</h3>
                   <p className="text-lg text-svi-dark-grey leading-relaxed">
-                    El track record, con cuenta real desde abril de 2023, es de un 30,4%, y la cartera actual tiene un potencial x2,1 en 5 años.
+                    Simulaciones históricas con un +16% de rentabilidad versus el 10% del índice S&P500 + Track record auditado desde abril de 2023 con un +12% de rentabilidad anual.
                   </p>
                 </div>
               </div>
@@ -155,8 +159,36 @@ export default function Home() {
           {/* Highlighted Statement Banner */}
           <div className="bg-white rounded-2xl shadow-sm border border-svi-light-blue/30 p-8 lg:p-12 text-center">
             <p className="text-xl lg:text-2xl text-svi-primary font-semibold leading-relaxed max-w-5xl mx-auto">
-              El sistema analiza más de 60.000 acciones y construye una cartera de 30 compañías de alta calidad compradas a valoraciones atractivas.
+              De 60.000 acciones que existen en el mundo a 30 tesis de inversión de alta convicción y bajo los principios del Value Investing y la visión Business Owner a largo plazo, buscando el +10% de rentabilidad en todas nuestras inversiones.
             </p>
+          </div>
+
+          {/* S&P500 live map */}
+          <div className="mt-16 lg:mt-20 text-center">
+            <h3 className="text-3xl lg:text-4xl font-bold text-svi-primary mb-8">
+              El S&P500 en directo
+            </h3>
+            <div className="max-w-5xl mx-auto">
+              <div className="rounded-2xl border border-svi-light-grey bg-white shadow-lg overflow-hidden p-4 lg:p-6">
+                <img
+                  src="/deck/sp500-map.png"
+                  alt="Mapa del S&P500 por calidad y precio"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+              <p className="mt-4 text-sm text-svi-medium-grey">
+                Nuestras compañías (círculos azules) frente al universo del S&P500, por calidad y precio.
+              </p>
+              <a
+                href="https://app.svinvesting.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center justify-center px-8 py-4 border-2 border-svi-primary text-svi-primary text-base font-semibold rounded-lg hover:bg-svi-primary hover:text-white transition-all"
+              >
+                Explóralo en directo en app.svinvesting.com
+                <ExternalLink className="ml-2 w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Optional Disclaimer Area */}
@@ -183,7 +215,16 @@ export default function Home() {
                 ¿Cómo lo hacemos?
               </h2>
               <p className="text-xl text-svi-dark-grey mb-12 leading-relaxed text-left">
-                Nuestra metodología combina análisis fundamental riguroso con un proceso de selección sistemático
+                Nuestro algoritmo y metodología de inversión es público y disponible a través de{' '}
+                <a
+                  href="https://app.svinvesting.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-svi-primary underline underline-offset-4 hover:text-svi-secondary transition-colors"
+                >
+                  APP.SVINVESTING.COM
+                </a>{' '}
+                y todas las actualizaciones y mejoras se encuentran aquí:
               </p>
               <Link
                 to="/metodologia"
@@ -198,6 +239,8 @@ export default function Home() {
       </section>
 
       <ContactForm />
+
+      <DavidBanner />
     </div>
   );
 }
