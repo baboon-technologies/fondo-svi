@@ -17,6 +17,9 @@ import { ReportsArchive } from '@/components/factsheet/ReportsArchive';
 // import { MetricsCards } from '@/components/factsheet/MetricsCards';
 import { ComparisonTables } from '@/components/factsheet/ComparisonTables';
 import { BuffettStatsSection } from '@/components/factsheet/BuffettStatsSection';
+import { TrackRecordSection } from '@/components/factsheet/TrackRecordSection';
+import { CurrentInvestments } from '@/components/factsheet/CurrentInvestments';
+import { ContactSection } from '@/components/factsheet/ContactSection';
 // import { DiversificationGrid } from '@/components/factsheet/DiversificationGrid';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
@@ -27,8 +30,8 @@ export default function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-10 md:py-12">
         <div className="mb-6 flex justify-end animate-fadeIn">
           <a href="/documents/reporte_SVI_Junio_2026.pdf" download="Reporte SVI - Junio 2026.pdf">
-            <Button className="text-white transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: 'var(--svi-primary)' }}>
-              <Download className="mr-2 h-4 w-4" />
+            <Button className="h-auto px-8 py-4 text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl" style={{ backgroundColor: 'var(--svi-primary)' }}>
+              <Download className="mr-2 h-5 w-5" />
               Descarga Reporte Completo (PDF)
             </Button>
           </a>
@@ -93,6 +96,14 @@ export default function Home() {
           </div>
 
           <div className="animate-fadeIn animate-delay-175">
+            <TrackRecordSection />
+          </div>
+
+          <div className="animate-fadeIn animate-delay-175">
+            <CurrentInvestments />
+          </div>
+
+          <div className="animate-fadeIn animate-delay-175">
             <HistoricalBacktesting />
           </div>
 
@@ -123,6 +134,18 @@ export default function Home() {
 
           <div className="animate-fadeIn animate-delay-235">
             <ComparisonTables />
+          </div>
+
+          <div className="animate-fadeIn animate-delay-240 mt-12">
+            <ContactSection />
+          </div>
+
+          <div className="animate-fadeIn animate-delay-240 mt-12">
+            <img
+              src="/deck/david-svi-banner.jpg"
+              alt="David Sánchez Molina - Systematic Value Investing"
+              className="w-full h-auto rounded-xl shadow-lg"
+            />
           </div>
 
           {/* <div className="animate-fadeIn animate-delay-237">
@@ -165,8 +188,8 @@ export default function Home() {
 
         <div className="mt-8 text-center animate-fadeIn animate-delay-300">
           <a href="/documents/reporte_SVI_Junio_2026.pdf" download="Reporte SVI - Junio 2026.pdf">
-            <Button className="text-white transition-all duration-300 hover:scale-105 hover:shadow-lg" style={{ backgroundColor: 'var(--svi-primary)' }}>
-              <Download className="mr-2 h-4 w-4" />
+            <Button className="h-auto px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: 'var(--svi-primary)' }}>
+              <Download className="mr-2 h-6 w-6" />
               Descarga Reporte Completo (PDF)
             </Button>
           </a>

@@ -5,7 +5,6 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'rec
 interface ChartDataPoint {
   date: string;
   price: number;
-  timestamp: number;
 }
 
 interface QuoteData {
@@ -13,10 +12,8 @@ interface QuoteData {
   regularMarketPrice: number;
   regularMarketChange: number;
   regularMarketChangePercent: number;
-  regularMarketTime: string;
   currency: string;
   lastUpdate: string;
-  source?: string;
   chartData: ChartDataPoint[];
 }
 
@@ -28,31 +25,13 @@ export default function SVIQuoteVisual() {
   useEffect(() => {
     const fetchQuote = async () => {
       try {
-        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://mdzizyolyfflpzaqnbjw.supabase.co';
-        const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-        const apiUrl = `${supabaseUrl}/functions/v1/svi-quote?symbol=0P0001TB5J.F`;
-
-        console.log('[SVI-QUOTE CLIENT] Supabase URL:', supabaseUrl);
-        console.log('[SVI-QUOTE CLIENT] Fetching from:', apiUrl);
-
-        const response = await fetch(apiUrl, {
-          headers: {
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'apikey': supabaseAnonKey,
-          }
-        });
-
-        console.log('[SVI-QUOTE CLIENT] Response status:', response.status);
+        const response = await fetch('/api/yahoo-quote?symbol=0P0001TB5J.F');
 
         if (!response.ok) {
-          const errorText = await response.text();
-          console.error('[SVI-QUOTE CLIENT] Error response:', errorText);
           throw new Error(`HTTP error: ${response.status}`);
         }
 
         const data = await response.json();
-        console.log('[SVI-QUOTE CLIENT] Data received:', JSON.stringify(data).substring(0, 200));
-        console.log('[SVI-QUOTE CLIENT] Chart data points:', data.chartData?.length || 0);
 
         if (data.error) {
           throw new Error(data.error);
@@ -63,11 +42,6 @@ export default function SVIQuoteVisual() {
           setLoading(false);
           setError(false);
         } else {
-          console.error('[SVI-QUOTE CLIENT] Invalid data structure:', {
-            hasPrice: !!data.regularMarketPrice,
-            hasChartData: !!data.chartData,
-            chartLength: data.chartData?.length
-          });
           throw new Error('Invalid data received');
         }
       } catch (err) {
@@ -133,7 +107,7 @@ export default function SVIQuoteVisual() {
                 Última act.
               </p>
               <p className="text-[9px] sm:text-xs font-medium text-svi-dark-grey">
-                {new Date(quoteData.regularMarketTime).toLocaleString('es-ES', {
+                {new Date(quoteData.lastUpdate).toLocaleString('es-ES', {
                   day: '2-digit',
                   month: 'short',
                   hour: '2-digit',
@@ -150,11 +124,6 @@ export default function SVIQuoteVisual() {
             <div className={`text-base sm:text-lg md:text-xl font-semibold ${isPositive ? 'text-green-600' : 'text-red-600'} mt-0.5`}>
               {isPositive ? '+' : ''}{quoteData.regularMarketChange.toFixed(2)} ({isPositive ? '+' : ''}{quoteData.regularMarketChangePercent.toFixed(2)}%)
             </div>
-            {quoteData.source && (
-              <p className="text-[9px] sm:text-xs text-svi-medium-grey mt-1">
-                Fuente: {quoteData.source === 'yahoo' ? 'Yahoo Finance' : 'Calculado'}
-              </p>
-            )}
           </div>
 
           <div className="flex-1 min-h-0">
@@ -187,7 +156,7 @@ export default function SVIQuoteVisual() {
                     const date = new Date(value);
                     return date.toLocaleDateString('es-ES', { day: '2-digit', month: 'short', year: 'numeric' });
                   }}
-                  formatter={(value: number) => [`${value.toFixed(2)} EUR`, 'Precio']}
+                  formatter={(value) => [`${Number(value).toFixed(2)} EUR`, 'Precio']}
                 />
                 <Line
                   type="monotone"

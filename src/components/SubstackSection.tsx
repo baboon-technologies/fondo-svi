@@ -20,18 +20,7 @@ export default function SubstackSection() {
   useEffect(() => {
     const fetchLatestPost = async () => {
       try {
-        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://mdzizyolyfflpzaqnbjw.supabase.co';
-        const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-        const apiUrl = `${supabaseUrl}/functions/v1/substack-latest`;
-
-        console.log('[Substack] Fetching latest post from:', apiUrl);
-
-        const response = await fetch(apiUrl, {
-          headers: {
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'apikey': supabaseAnonKey,
-          }
-        });
+        const response = await fetch('/api/media/substack');
 
         if (!response.ok) {
           console.error('[Substack] API response not OK:', response.status);
@@ -39,7 +28,11 @@ export default function SubstackSection() {
         }
 
         const data = await response.json();
-        console.log('[Substack] Post received:', data.title);
+
+        if (data.error || !data.title) {
+          throw new Error(data.error || 'Invalid data received');
+        }
+
         setPost(data);
         setError(false);
       } catch (err) {

@@ -1,4 +1,4 @@
-import { TrendingUp } from 'lucide-react';
+
 
 export default function ResultsSection() {
   return (

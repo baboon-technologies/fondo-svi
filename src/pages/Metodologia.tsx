@@ -1,14 +1,7 @@
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import ContactForm from '../components/ContactForm';
-
-function ImagePlaceholder({ label }: { label: string }) {
-  return (
-    <div className="w-full rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center py-20 sm:py-28 my-8">
-      <span className="text-sm text-svi-medium-grey font-medium text-center px-6">{label}</span>
-    </div>
-  );
-}
+import ReportCTA from '../components/ReportCTA';
 
 const TABS = [
   { id: 'como-funciona', label: 'Cómo funciona el SVI' },
@@ -99,7 +92,7 @@ export default function Metodologia() {
                 <div className="relative rounded-xl overflow-hidden shadow-lg bg-black aspect-video">
                   <iframe
                     className="absolute inset-0 w-full h-full"
-                    src="https://www.youtube.com/embed/qCV5Tx_x6Ok"
+                    src="https://www.youtube.com/embed/-VObD3uX5CM"
                     title="Cómo funciona el Systematic Value Investing"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -585,6 +578,8 @@ export default function Metodologia() {
       </section>
 
       <ContactForm />
+
+      <ReportCTA />
 
     </div>
   );

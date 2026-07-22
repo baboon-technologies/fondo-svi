@@ -17,18 +17,7 @@ export default function YouTubeLatestVideo() {
   useEffect(() => {
     const fetchLatestVideo = async () => {
       try {
-        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://mdzizyolyfflpzaqnbjw.supabase.co';
-        const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-        const apiUrl = `${supabaseUrl}/functions/v1/youtube-latest-video`;
-
-        console.log('[YouTube] Fetching latest video from:', apiUrl);
-
-        const response = await fetch(apiUrl, {
-          headers: {
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'apikey': supabaseAnonKey,
-          }
-        });
+        const response = await fetch('/api/media/youtube');
 
         if (!response.ok) {
           console.error('[YouTube] API response not OK:', response.status);
@@ -36,7 +25,11 @@ export default function YouTubeLatestVideo() {
         }
 
         const data = await response.json();
-        console.log('[YouTube] Video received:', data.title);
+
+        if (data.error || !data.videoId) {
+          throw new Error(data.error || 'Invalid data received');
+        }
+
         setVideo(data);
         setError(false);
       } catch (err) {

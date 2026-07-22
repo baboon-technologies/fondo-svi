@@ -12,7 +12,11 @@ interface DistributorTableProps {
 export function DistributorTable({ info }: DistributorTableProps) {
   const rows = [
     { label: 'Distribuidor', value: info.distributor },
-    { label: 'Responsable de Relaciones con Inversores', value: info.responsable },
+    {
+      label: 'Responsable de Inversiones',
+      value: info.responsable,
+      href: 'https://www.linkedin.com/in/davidmirrorauthor/',
+    },
     { label: 'Teléfono', value: info.telefono },
     { label: 'Email', value: info.email },
   ];
@@ -35,7 +39,19 @@ export function DistributorTable({ info }: DistributorTableProps) {
             }}
           >
             <span className="text-xs font-bold" style={{ color: 'var(--svi-dark-gray)' }}>{row.label}</span>
-            <span className="text-sm font-medium break-all" style={{ color: 'var(--svi-secondary)' }}>{row.value}</span>
+            {'href' in row && row.href ? (
+              <a
+                href={row.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium break-all hover:underline"
+                style={{ color: 'var(--svi-primary)' }}
+              >
+                {row.value}
+              </a>
+            ) : (
+              <span className="text-sm font-medium break-all" style={{ color: 'var(--svi-secondary)' }}>{row.value}</span>
+            )}
           </div>
         ))}
       </div>
