@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Panel {
   title: string;
@@ -140,35 +141,37 @@ export default function WhatIsCarousel() {
     return () => clearInterval(timer);
   }, [autoplay, panels.length]);
 
+  const panel = panels[currentPanel];
+
   return (
     <div className="relative">
-      <div className="grid">
-        {panels.map((panel, index) => (
-          <div
-            key={index}
-            className={`col-start-1 row-start-1 transition-opacity duration-1000 ${
-              index === currentPanel ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+      <div className="relative overflow-hidden px-12 sm:px-14 lg:px-20 pb-14 lg:min-h-[500px] flex items-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentPanel}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+            className="w-full grid lg:grid-cols-2 gap-8 lg:gap-14 items-center"
           >
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center px-10 sm:px-12 lg:px-16 pb-12">
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-svi-primary mb-5 leading-tight">
-                  {panel.title}
-                </h3>
-                {panel.content}
-              </div>
-              <div className="flex items-center justify-center">
-                {panel.visual}
-              </div>
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-svi-primary mb-5 leading-tight">
+                {panel.title}
+              </h3>
+              {panel.content}
             </div>
-          </div>
-        ))}
+            <div className="flex items-center justify-center">
+              {panel.visual}
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <button
         onClick={prevPanel}
         aria-label="Panel anterior"
-        className="absolute left-0 sm:-left-2 top-[45%] -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-all z-10 border border-svi-light-grey"
+        className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/95 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-all z-10 border border-svi-light-grey"
       >
         <ChevronLeft className="w-5 h-5 text-svi-dark-grey" />
       </button>
@@ -176,7 +179,7 @@ export default function WhatIsCarousel() {
       <button
         onClick={nextPanel}
         aria-label="Panel siguiente"
-        className="absolute right-0 sm:-right-2 top-[45%] -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-all z-10 border border-svi-light-grey"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/95 backdrop-blur-sm shadow-lg flex items-center justify-center hover:bg-white transition-all z-10 border border-svi-light-grey"
       >
         <ChevronRight className="w-5 h-5 text-svi-dark-grey" />
       </button>

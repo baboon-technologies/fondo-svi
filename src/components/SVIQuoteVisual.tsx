@@ -142,7 +142,8 @@ export default function SVIQuoteVisual() {
                 <YAxis
                   tick={{ fontSize: 9, fill: '#6B7280' }}
                   domain={['dataMin - 0.2', 'dataMax + 0.2']}
-                  width={42}
+                  tickFormatter={(value) => Number(value).toFixed(2)}
+                  width={44}
                 />
                 <Tooltip
                   contentStyle={{
