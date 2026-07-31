@@ -2,6 +2,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import ContactForm from '../components/ContactForm';
 import ReportCTA from '../components/ReportCTA';
+import SVIEvolution from '../components/SVIEvolution';
 
 const TABS = [
   { id: 'como-funciona', label: 'Cómo funciona el SVI' },
@@ -102,6 +103,9 @@ export default function Metodologia() {
             </div>
           </div>
         </div>
+
+        {/* EVOLUCIÓN DE LA METODOLOGÍA (timeline SVI 1.0 → 3.2) */}
+        <SVIEvolution />
 
         {/* BLOQUE PASIVA VS ACTIVA */}
         <div className="pb-16 sm:pb-20 md:pb-24 lg:pb-32 pt-6 sm:pt-8 bg-white">
