@@ -1,11 +1,11 @@
 import {
-  ShieldCheck,
+  Shield,
   Globe,
   Rocket,
   Scale,
   Filter,
   TrendingUp,
-  Network,
+  Settings,
   Cpu,
   Target,
   type LucideIcon,
@@ -20,13 +20,13 @@ interface Milestone {
 }
 
 const MILESTONES: Milestone[] = [
-  { n: 1, version: 'SVI 1.0', desc: 'Cuenta auditada en Interactive Brokers.', Icon: ShieldCheck },
-  { n: 2, version: 'SVI US Markets', desc: 'Creación del fondo de inversión con AndBank.', Icon: Globe },
+  { n: 1, version: 'SVI 1.0', desc: 'Cuenta auditada en Interactive Brokers.', Icon: Shield },
+  { n: 2, version: 'SVI US Markets', desc: 'Creación del Fondo de Inversión con AndBank.', Icon: Globe },
   { n: 3, version: 'SVI 2.0', desc: 'Nueva versión de la metodología SVI.', Icon: Rocket },
   { n: 4, version: 'Reducción comisiones', desc: 'Reducción de comisiones del fondo con la CNMV.', Icon: Scale },
   { n: 5, version: 'SVI 2.1', desc: 'Reducción de 40 holdings a 30 holdings.', Icon: Filter },
   { n: 6, version: 'SVI 2.2', desc: 'Incluimos venta de derivados.', Icon: TrendingUp },
-  { n: 7, version: 'SVI 3.0', desc: 'Nueva generación de la metodología SVI.', Icon: Network },
+  { n: 7, version: 'SVI 3.0', desc: 'Nueva generación de la metodología SVI.', Icon: Settings },
   { n: 8, version: 'SVI 3.1', desc: 'Creación del indicador AI Protected.', Icon: Cpu },
   { n: 9, version: 'SVI 3.2', desc: 'Eliminación del equiponderado y mayor peso en tesis de alta convicción.', Icon: Target },
 ];
