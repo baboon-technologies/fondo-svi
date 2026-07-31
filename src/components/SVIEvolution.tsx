@@ -10,7 +10,6 @@ import {
   Target,
   type LucideIcon,
 } from 'lucide-react';
-import SVIEvolutionChart from './SVIEvolutionChart';
 
 interface Milestone {
   n: number;
@@ -34,7 +33,7 @@ const MILESTONES: Milestone[] = [
 export default function SVIEvolution() {
   return (
     <div className="py-16 sm:py-20 md:py-24 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
           <p className="font-mono text-xs text-svi-medium-grey mb-3 tracking-wide">
             ABRIL 2023 → HOY
@@ -48,9 +47,20 @@ export default function SVIEvolution() {
           </p>
         </div>
 
-        {/* Gráfico de evolución (SVG nativo) */}
+        {/* Gráfico de evolución con los hitos anotados */}
         <div className="mb-12 sm:mb-14">
-          <SVIEvolutionChart />
+          <div className="rounded-2xl border border-svi-light-grey bg-white shadow-md p-3 sm:p-5">
+            <p className="lg:hidden text-[11px] text-svi-medium-grey mb-2">
+              ← Desliza para ver el gráfico completo →
+            </p>
+            <div className="overflow-x-auto lg:overflow-visible">
+              <img
+                src="/deck/svi-evolucion.jpg"
+                alt="Evolución de la rentabilidad del SVI desde abril de 2023 con sus hitos metodológicos: SVI 1.0, SVI US Markets, SVI 2.0, reducción de comisiones, SVI 2.1, SVI 2.2, SVI 3.0, SVI 3.1 y SVI 3.2"
+                className="h-auto w-[1150px] lg:w-full max-w-none"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Timeline nativo — en desktop la info ya está en el gráfico */}
