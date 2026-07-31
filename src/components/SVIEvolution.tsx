@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   ShieldCheck,
   Globe,
@@ -11,6 +10,7 @@ import {
   Target,
   type LucideIcon,
 } from 'lucide-react';
+import SVIEvolutionChart from './SVIEvolutionChart';
 
 interface Milestone {
   n: number;
@@ -32,8 +32,6 @@ const MILESTONES: Milestone[] = [
 ];
 
 export default function SVIEvolution() {
-  const [showChart, setShowChart] = useState(true);
-
   return (
     <div className="py-16 sm:py-20 md:py-24 bg-gray-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,22 +48,13 @@ export default function SVIEvolution() {
           </p>
         </div>
 
-        {/* Gráfico de evolución (imagen) — se muestra en pantallas grandes */}
-        {showChart && (
-          <div className="hidden lg:block mb-14">
-            <div className="rounded-2xl border border-svi-light-grey bg-white shadow-md p-6">
-              <img
-                src="/deck/svi-evolucion.png"
-                alt="Evolución de la rentabilidad del SVI y sus hitos metodológicos, de 2023 a hoy"
-                className="w-full h-auto"
-                onError={() => setShowChart(false)}
-              />
-            </div>
-          </div>
-        )}
+        {/* Gráfico de evolución (SVG nativo) */}
+        <div className="mb-12 sm:mb-14">
+          <SVIEvolutionChart />
+        </div>
 
-        {/* Timeline nativo — legible en móvil y desktop */}
-        <ol className="relative max-w-3xl mx-auto">
+        {/* Timeline nativo — en desktop la info ya está en el gráfico */}
+        <ol className="lg:hidden relative max-w-3xl mx-auto">
           {/* línea vertical */}
           <span
             className="absolute left-5 sm:left-6 top-2 bottom-2 w-px bg-svi-light-blue/60"
