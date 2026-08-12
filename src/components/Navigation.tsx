@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Download, ExternalLink } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-const REPORT_URL = 'https://www.svinvesting.com/ultimo-reporte';
+const REPORT_URL = 'https://reports.svinvesting.com/ultimo-reporte';
 const PLATFORM_URL = 'https://app.svinvesting.com/';
 
 export default function Navigation() {
